@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM python:3.8
   
 RUN apt-get -qq update && \
     apt-get -qq -y install ffmpeg gcc && \
