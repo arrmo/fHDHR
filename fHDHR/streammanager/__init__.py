@@ -172,10 +172,6 @@ class StreamManager():
             transcode_quality = self.fhdhr.origins.get_origin_property(origin_name, "transcode_quality")
             self.fhdhr.logger.debug("Client did not select a transcode quality. Defaulting to origin %s setting of %s" % (origin_name, transcode_quality))
 
-        valid_transcode_types = [None, "heavy", "mobile", "internet720", "internet480", "internet360", "internet240"]
-        if transcode_quality not in valid_transcode_types:
-            response_dict = {"message": "Not Found", "status_code": 503, "headers": "802 - Unknown Transcode Profile"}
-            return {}, response_dict
         stream_args.update({"transcode_quality": transcode_quality})
 
         tuner_number = request.args.get('tuner', default=None, type=str)
