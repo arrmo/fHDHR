@@ -1,0 +1,9 @@
+{
+  "heavy":       ["-c", "copy", "-f", "mpegts"],
+  "mobile":      ["-c", "copy", "-s", "1280X720", "-b:v", "500k", "-b:a", "128k", "-f", "mpegts"],
+  "internet720": ["-c", "copy", "-s", "1280X720", "-b:v", "1000k", "-b:a", "196k", "-f", "mpegts"],
+  "internet480": ["-c", "copy", "-s", "848X480", "-b:v", "400k", "-b:a", "128k", "-f", "mpegts"],
+  "internet360": ["-c", "copy", "-s", "640X360", "-b:v", "250k", "-b:a", "96k", "-f", "mpegts"],
+  "internet240": ["-c", "copy", "-s", "432X240", "-b:v", "250k", "-b:a", "96k", "-f", "mpegts"],
+  "custom":      ["-c:v", "hevc_nvenc", "-s", "hd1080", "-preset", "p6", "-tune", "hq", "-b:v", "3M", "-c:a", "ac3", "-b:a", "196k", "-f", "mpegts"]
+}
